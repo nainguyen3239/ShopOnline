@@ -18,5 +18,15 @@ namespace SHOPONLINE.Models.BUS
             var db = new MiniShopConnectionDB();
             return db.SingleOrDefault<SANPHAM>("select * from SANPHAM where MaSanPham = @0",a);
         }
+        public static IEnumerable<SANPHAM> Top4()
+        {
+            var db = new MiniShopConnectionDB();
+            return db.Query<SANPHAM>("select Top 4 * from SANPHAM where GhiChu = N'New'");
+        }
+        public static IEnumerable<SANPHAM> Top4Hot()
+        {
+            var db = new MiniShopConnectionDB();
+            return db.Query<SANPHAM>("select Top 4 * from SANPHAM where LuotView > 0");
+        }
     }
 }

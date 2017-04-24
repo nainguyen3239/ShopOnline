@@ -161,6 +161,12 @@ namespace MiniShopConnection
 
 
 
+
+
+		[Column] public string TinhTrang { get; set; }
+
+
+
 	}
 
     
@@ -186,6 +192,12 @@ namespace MiniShopConnection
 
 
 		[Column] public string TenNhaSanXuat { get; set; }
+
+
+
+
+
+		[Column] public string TinhTrang { get; set; }
 
 
 
@@ -287,11 +299,15 @@ namespace MiniShopConnection
 
 		[Column] public string TinhTrang { get; set; }
 
-        internal object ToPageList()
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+
+
+
+		[Column] public string GhiChu { get; set; }
+
+
+
+	}
 
     
 

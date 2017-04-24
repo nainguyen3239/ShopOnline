@@ -9,8 +9,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Category</a></li>
+                    <li> @Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Shop")</li>
                     <li><a href="#">@Model.TenSanPham</a></li>
                 </ul>
             </div>

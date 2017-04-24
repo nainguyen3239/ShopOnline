@@ -17,7 +17,7 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="~/Asset/images/main-banner1-1903x600.jpg" alt="First slide">
+                            <img src="~/Asset/images/111.jpg" alt="First slide">
                             <!-- Static Header -->
                             <div class="header-text hidden-xs">
                                 <div class="col-md-12 text-center">
@@ -25,7 +25,7 @@
                             </div><!-- /header-text -->
                         </div>
                         <div class="item">
-                            <img src="~/Asset/images/main-banner2-1903x600.jpg" alt="Second slide">
+                            <img src="~/Asset/images/222.jpg" alt="Second slide">
                             <!-- Static Header -->
                             <div class="header-text hidden-xs">
                                 <div class="col-md-12 text-center">
@@ -33,7 +33,7 @@
                             </div><!-- /header-text -->
                         </div>
                         <div class="item">
-                            <img src="~/Asset/images/main-banner3-1903x600.jpg" alt="Third slide">
+                            <img src="~/Asset/images/333.jpg" alt="Third slide">
                             <!-- Static Header -->
                             <div class="header-text hidden-xs">
                                 <div class="col-md-12 text-center">
@@ -64,73 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="heading"><h2>SPECIAL PRODUCTS</h2></div>
-                <div class="products">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/iphone.png" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/galaxy-s4.jpg" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/galaxy-note.jpg" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/Z1.png" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      @Html.Partial("_Top4",SHOPONLINE.Models.BUS.MiniShopBUS.Top4())
         <div class="row">
             <div class="banner">
                 <div class="col-sm-6">
@@ -141,72 +75,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="heading"><h2>FEATURED PRODUCTS</h2></div>
-                <div class="products">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/iphone.png" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/galaxy-s4.jpg" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/galaxy-note.jpg" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="product">
-                            <div class="image"><a href="product.html"><img src="~/Asset/images/Z1.png" /></a></div>
-                            <div class="buttons">
-                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-                            </div>
-                            <div class="caption">
-                                <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                                <div class="price">$122<span>$98</span></div>
-                                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      @Html.Partial("_Top4Hot", SHOPONLINE.Models.BUS.MiniShopBUS.Top4Hot())
     </div>
 </div>

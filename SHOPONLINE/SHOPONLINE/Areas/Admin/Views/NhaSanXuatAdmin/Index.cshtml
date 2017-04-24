@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MiniShopConnection.NHASANXUAT>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 70%;
+        margin:auto;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #5d5e63;
+    }
+
+    th {
+        background-color: #2a9fd6;
+        color: white;
+    }
+</style>
+
+
+    <h2>Quản Lý Nhà Sản Xuất  </h2>
+
+    <table>
+        <tr>
+            <th>Mã Nhà Sản Xuất</th>
+            <th>Tên Nhà Sản Xuất</th>
+            <th>Tình Trạng</th>
+            <th colspan="1"><a href="@Url.Action("Create","NhaSanXuatAdmin")"><img src="~/Asset/images/add1.png";"/></a></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaNhaSanXuat</td>
+                <td>@item.TenNhaSanXuat</td>
+                <td>@item.TinhTrang</td>
+                <td><a href="@Url.Action("Edit","NhaSanXuatAdmin",new { id = @item.MaNhaSanXuat})"><img src="~/Asset/images/edit1.png" /></a></td>
+            </tr>
+        }
+        
+       
+    </table>
+
+

@@ -1,0 +1,79 @@
+﻿@model MiniShopConnection.LOAISANPHAM
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 70%;
+        background-color: #2a9fd6;
+        color: gainsboro;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+    div {
+        border-radius: 5px;
+        background-color: #000000;
+        padding: 20px;
+    }
+</style>
+
+
+<h3>Sửa Loại Sẩn Phẩm</h3>
+
+<div style="margin:auto">
+    @using (Html.BeginForm("Edit", "LoaiSanPhamAdmin",FormMethod.Post, new { @style = "width : 50%; margin : auto; color:black" }))
+    {
+        <form action="/action_page.php">
+            <label for="fname">Mã Loại Sản Phẩm </label>
+            <input type="text" id="fname" name="MaLoaiSanPham" placeholder="Nhập Mã Loại Sản Phẩm..." required value="@Model.MaLoaiSanPham" readonly>
+
+            <label for="lname">Tên Loại Sản Phẩm</label>
+            <input type="text" id="lname" name="TenLoaiSanPham" placeholder="Nhập Tên ..." required value="@Model.TenLoaiSanPham">
+
+            <label for="country">Tình Trạng</label>
+            <select id="country" style="width:30%" name="TinhTrang" required>
+                @if (Model.TinhTrang == "1")
+                {
+                    <option value="0">Mở</option>
+                    <option value="1" selected>Khóa</option>
+                }
+                else
+                {
+                    <option value="0" selected>Mở</option>
+                    <option value="1">Khóa</option>
+                }
+
+            </select>
+
+            <input type="submit" value="UPDATE">
+        </form>
+    }
+
+</div>
+
+
+
+
+
+
+

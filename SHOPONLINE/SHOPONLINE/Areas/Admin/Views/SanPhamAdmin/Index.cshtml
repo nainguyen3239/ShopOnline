@@ -1,8 +1,70 @@
-﻿
+﻿@model IEnumerable<MiniShopConnection.SANPHAM>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
 
-<h2>Index cua trang san pham</h2>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: auto;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #5d5e63;
+    }
+
+    th {
+        background-color: #2a9fd6;
+        color: white;
+    }
+</style>
+
+
+<h2>Quản Lý Sản Phẩm </h2>
+
+<table>
+    <tr>
+        <th>Mã Sản Phẩm</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Mã Loại Sản Phẩm</th>
+        <th>Mã Nhà Sản Xuất</th>
+        <th>Mô Tả Sản Phẩm</th>
+        <th>Giá</th>
+        <th>Số Lượng</th>
+        <th>Hình Ảnh</th>
+        <th>Tình Trạng</th>
+        <th colspan="2"><a href="@Url.Action("Create","SanPhamAdmin")"><img src="~/Asset/images/add1.png" ;" /></a></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaSanPham</td>
+            <td>@item.TenSanPham</td>
+            <td>@item.MaLoaiSanPham</td>
+            <td>@item.MaNhaSanXuat</td>
+            <td>@item.MoTaSanPham</td>
+            <td>@item.Gia</td>
+            <td>@item.SoLuong</td>
+            <td><img src = "/Asset/images/@item.HinhChinh" style="width:40px;height:60px"/></td>
+            <td>@item.TinhTrang</td>
+            <td><a href="@Url.Action("Edit","SanPhamAdmin",new { id = @item.MaSanPham})"><img src="~/Asset/images/edit1.png" /></a></td>
+            <td><a href="@Url.Action("Delete","SanPhamAdmin",new { id = @item.MaSanPham})"><img src="~/Asset/images/delete1png.png" /></a></td>
+        </tr>
+    }
+
+
+</table>
+
+
+
+
+
 

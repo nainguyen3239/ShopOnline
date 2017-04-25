@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+<script src="~/areas/assetadmin/js/product/previewfile.js"></script>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 70%;
+        background-color: #2a9fd6;
+        color: gainsboro;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+    div {
+        border-radius: 5px;
+        background-color: #000000;
+        padding: 20px;
+    }
+</style>
+
+
+<h3>Thêm Sản Phẩm </h3>
+
+
+    @using (Html.BeginForm("Create", "SanPhamAdmin", FormMethod.Post, new { enctype = "multipert/form-data" }))
+    {
+        <table style="width:90%;margin:auto;background-color:#000000">
+            <tr>
+                <td>Mã Sản Phẩm</td>
+                <td style="color:#000000"><input style="width:300px ;float:left;height:35px" maxlength="50" type="text" name="MaSanPham"/></td>
+                <td rowspan="8">
+                    <div>
+                        <img id="target" class="img" src="#" alt="your image" style="float:right;width:320px;height:300px"/>
+                    </div>
+                </td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Mã Loại Sản Phẩm</td>
+                <td style="color:#000000">
+                    @Html.DropDownList("MaLoaiSanPham", null, new { @style = "float-left ; width:300px ; height:45px" })
+                </td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Mã Nhà Sản Xuất</td>
+                <td  style="color:#000000">
+                    @Html.DropDownList("MaNhaSanXuat", null, new { @style = "float-left ; width:300px ; height:45px" })
+                </td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Tên Sản Phẩm</td>
+                <td style="color:#000000"><input style="width:300px;float:left;height:45px" maxlength="50" type="text" name="TenSanPham" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Mô Tả Sản Phẩm</td>
+                <td style="color:#000000"><input style="width:300px;float:left;height:45px" maxlength="50" type="text" name="MoTaSanPham" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Giá</td>
+                <td style="color:#000000"><input style="width:300px;float:left;height:35px" maxlength="50" type="number" name="Gia" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Số Lượng</td>
+                <td  style="color:#000000"><input style="width:300px;float:left;height:35px" maxlength="11" type="number" name="SoLuong" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Hình Chính</td>
+                <td><input type="File" class="img" id="file_Hinh" name="HinhChinh" onchange="previewFile();" style="float:left" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Hình 1</td>
+                <td><input type="File" id="file_Hinh1" name="Hinh1"  style="float:left" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Hình 2</td>
+                <td><input type="file" id="file_Hinh2" name="Hinh2"  style="float:left" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Hình 3</td>
+                <td><input type="file" id="file_Hinh3" name="Hinh3"  style="float:left" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Hình 4</td>
+                <td><input type="file" id="file_Hinh4" name="Hinh4"  style="float:left" /></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td style="width:300px;"> Ghi Chú</td>
+                <td colspan="2"  style="color:#000000"><textarea class="ckedionr" style="color:#000000 width : 300px; height : 150px ;max-width : 100px;max-height:150px;" rows="4" cols="30"  name="GhiChu"></textarea></td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td>Tình Trạng</td>
+                <td  style="color:#000000">
+                    <select  style="float:left;width:300px;height:48px;" name="TinhTrang" required>
+                        <option value="0" style="color:#000000">Mở</option>
+                        <option value="1" style="color:#000000">Khóa</option>
+                    </select>
+                </td>
+            </tr>
+            @*--------------------*@
+            <tr>
+                <td colspan="3"> 
+                    <input style="height:40px;width:300px;margin-left:32%; background:#016ABC;color:#fff;border:ipx solid #eee;border-radius:20px;box-shadow:5px 5px 5px #eee; " type="submit" name="ThemSanPham" value="ADD"/>
+                </td>
+            </tr>
+        </table>
+    }
+
+
+
+
